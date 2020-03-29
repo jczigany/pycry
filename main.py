@@ -32,11 +32,11 @@ class MainWindow(QMainWindow):
                 print("dialóg lefutott")
                 self.change_mainwindow_layout()
             else:
-                print("Ki kellene lépni")
+                print("Would be exit")
                 self.close()
 
     def closeEvent(self, event):
-        print("Kilépés")
+        print("Exit")
         sys.exit()
 
     def change_mainwindow_layout(self):
