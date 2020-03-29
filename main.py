@@ -8,7 +8,6 @@ from login.login_dialog import LoginWindow
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.belepve = False
 
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
@@ -25,15 +24,14 @@ class MainWindow(QMainWindow):
         gomb3 = QPushButton("3. Gomb")
         self.details_layout.addWidget(gomb3)
 
-        if not self.belepve:
-            belepes = LoginWindow(self)
+        belepes = LoginWindow(self)
 
-            if belepes.exec_():
-                print("dialóg lefutott")
-                self.change_mainwindow_layout()
-            else:
-                print("Would be exit")
-                self.close()
+        if belepes.exec_():
+            print("dialóg lefutott")
+            self.change_mainwindow_layout()
+        else:
+            print("Would be exit")
+            self.close()
 
     def closeEvent(self, event):
         print("Exit")
