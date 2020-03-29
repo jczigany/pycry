@@ -4,6 +4,7 @@ import sys
 
 from login.login_dialog import LoginWindow
 
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
@@ -15,13 +16,13 @@ class MainWindow(QMainWindow):
         self.main_layout = QHBoxLayout(central_widget)
 
         self.category_layout = QVBoxLayout()
-        gomb1 = QPushButton()
+        gomb1 = QPushButton("1. Gomb")
         self.category_layout.addWidget(gomb1)
         self.item_layout = QVBoxLayout()
-        gomb2 = QPushButton()
+        gomb2 = QPushButton("2. Gomb")
         self.item_layout.addWidget(gomb2)
         self.details_layout = QVBoxLayout()
-        gomb3 = QPushButton()
+        gomb3 = QPushButton("3. Gomb")
         self.details_layout.addWidget(gomb3)
 
         if not self.belepve:
@@ -38,16 +39,10 @@ class MainWindow(QMainWindow):
         print("Kilépés")
         sys.exit()
 
-
     def change_mainwindow_layout(self):
-
         self.main_layout.addLayout(self.category_layout)
         self.main_layout.addLayout(self.item_layout)
         self.main_layout.addLayout(self.details_layout)
-        # self.login_widget = None
-
-    def Login_clicked(self):
-        print("Login clicked")
 
 
 if __name__ == '__main__':

@@ -1,6 +1,7 @@
-from PySide2.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QVBoxLayout, QHBoxLayout, QLabel, QDialog
+from PySide2.QtWidgets import QApplication, QPushButton, QLineEdit, QVBoxLayout, QHBoxLayout, QLabel, QDialog
 
 import sys
+
 
 class LoginWindow(QDialog):
     def __init__(self, parent):
@@ -37,7 +38,6 @@ class LoginWindow(QDialog):
         self.cancel_button.clicked.connect(self.form_clear)
         self.exit_button.clicked.connect(self.reject)
 
-
     def accept(self):
         if len(self.name.text()) and len(self.password.text()):
             print(f"Bejelentkezési név: {self.name.text()}")
@@ -55,7 +55,6 @@ class LoginWindow(QDialog):
     def reject(self):
         self.megszakit = True
         super(LoginWindow, self).reject()
-
 
 
 if __name__ == '__main__':
