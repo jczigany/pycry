@@ -1,0 +1,2 @@
+# pycry
+Projekt moduljainak tesztelése
