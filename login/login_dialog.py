@@ -7,7 +7,6 @@ class LoginWindow(QDialog):
     def __init__(self, parent):
         super(LoginWindow, self).__init__(parent)
         self.setWindowTitle("Kérem adja meg a bejelentkezési adatokat")
-        self.megszakit = False
         main_layout = QVBoxLayout(self)
 
         name_layout = QHBoxLayout()
@@ -50,10 +49,8 @@ class LoginWindow(QDialog):
     def form_clear(self):
         self.name.clear()
         self.password.clear()
-        # pass
-
+ 
     def reject(self):
-        self.megszakit = True
         super(LoginWindow, self).reject()
 
 
